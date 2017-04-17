@@ -35,7 +35,7 @@ GOS_main <- function(dataset = 1, K = 4, model = 0, p = 1, q = 0) {
     t0 <- Sys.time()
     twopass <- EstTimeInvariantMod(R, Rf, F_mat, dataset)
     t1 <- Sys.time()
-    telapsed <- difftime(t1, t0)
+    time_elapsed <- difftime(t1, t0)
 
   } else {
 
@@ -43,10 +43,13 @@ GOS_main <- function(dataset = 1, K = 4, model = 0, p = 1, q = 0) {
     t0 <- Sys.time()
     twopass <- EstTimeVariantMod(R, Rf, F_mat, Z, Zi, dataset)
     t1 <- Sys.time()
-    telapsed <- difftime(t1, t0)
+    time_elapsed <- difftime(t1, t0)
   }
 
-  out <- twopass
+  out <- list(
+    twopass
+    , time_elapsed
+  )
   return(out)
 
 }

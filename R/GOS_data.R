@@ -18,7 +18,7 @@ GOS_data <- function(dataset, K, model, p, q) {
   ## data
   if (dataset == 1) {
     dataobj = FF25
-  } else if ( dataset == 2) {
+  } else if (dataset == 2) {
     dataobj = Indu44
   } else if (dataset == 3) {
     dataobj = CRSPCMST_ret
@@ -30,7 +30,7 @@ GOS_data <- function(dataset, K, model, p, q) {
   F_mat <- as.matrix(F_mat[, 1:K] * 10)    # rescale factors
   # RiskFree
   Rf <- RiskFree
-  dataset <- ifelse((dataset == 1 || dataset == 2), "portfolio", "individual")
+  dataset <- ifelse(dataset == 1 || dataset == 2, "portfolio", "individual")
 
   out <- list(
     R = R
