@@ -1,0 +1,22 @@
+Package: armagos2016
+Type: Package
+Title: Reproducing GOS 2016
+Description: RcppArmadillo based Reproduction of key parts of "Time-Varying Risk Premium in Large Cross-Sectional Equity Data Sets".
+    Authors: P. Gagliardini, E. Ossola and O. Scaillet. Published in: Econometrica 2016 Volume 84, Issue 3 May 2016.
+Version: 0.1.0
+Authors@R: c(
+    person("Alberto", "Quaini", email = "alberto_quaini@hotmail.it", role = c("aut", "cre")),
+    person("Dominik", "Graf", email = "dominik.k.graf@gmail.com", role = c("aut"))
+    )
+URL: https://github.com/quainialberto/armagos2016
+BugReports: https://github.com/quainialberto/armagos2016/issues
+Depends: R (>= 3.3.3)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+LinkingTo:
+    Rcpp,
+    RcppArmadillo
+Imports:
+    Rcpp
+RoxygenNote: 6.0.1
